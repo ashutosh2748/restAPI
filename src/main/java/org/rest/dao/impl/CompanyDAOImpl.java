@@ -4,7 +4,6 @@ import org.rest.dao.CompanyDAO;
 import org.rest.model.Company;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
@@ -25,7 +24,7 @@ public class CompanyDAOImpl implements CompanyDAO {
 
     public Company getCompanyById(int companyId) {
         Session session = this.sessionFactory.getCurrentSession();
-        Company company = (Company) session.load(Company.class, new Integer(companyId));
+        Company company = (Company) session.get(Company.class, new Integer(companyId));
         return company;
     }
 
@@ -37,7 +36,7 @@ public class CompanyDAOImpl implements CompanyDAO {
 
     public void deleteCompany(int companyId) {
         Session session = this.sessionFactory.getCurrentSession();
-        Company company = (Company) session.load(Company.class, new Integer(companyId));
+        Company company = (Company) session.get(Company.class, new Integer(companyId));
 
         if (null != company) {
             session.delete(companyId);
