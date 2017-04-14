@@ -7,8 +7,8 @@
                 return $http.get(urlBase);
             };
             
-            this.addCompany = function () {
-                
+            this.addCompany = function (company) {
+                return $http.post(urlBase, company);
             }
         }]);
 })(window.angular);
