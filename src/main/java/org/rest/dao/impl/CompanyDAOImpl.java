@@ -39,7 +39,7 @@ public class CompanyDAOImpl implements CompanyDAO {
         Company company = (Company) session.get(Company.class, new Integer(companyId));
 
         if (null != company) {
-            session.delete(companyId);
+            session.delete(company);
         }
     }
 }
