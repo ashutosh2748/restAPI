@@ -17,32 +17,32 @@
             <p class="lead">Please fill the following form</p>
         </div>
 
-        <form class="form-horizontal">
+        <form class="form-horizontal" ng-submit="addCompanyData(companyData)">
             <div class="form-group">
                 <label for="name" class="col-sm-2 control-label">Name</label>
                 <div class="col-sm-10">
-                    <input type="text" class="form-control" id="name" placeholder="Name">
+                    <input type="text" class="form-control" id="name" ng-model="companyData.name" placeholder="Name">
                 </div>
             </div>
 
             <div class="form-group">
                 <label for="website" class="col-sm-2 control-label">Web Site</label>
                 <div class="col-sm-10">
-                    <input type="text" class="form-control" id="website" placeholder="Website">
+                    <input type="text" class="form-control" id="website" ng-model="companyData.website" placeholder="Website">
                 </div>
             </div>
 
             <div class="form-group">
                 <label for="location" class="col-sm-2 control-label">Location</label>
                 <div class="col-sm-10">
-                    <input type="text" class="form-control" id="location" placeholder="Location">
+                    <input type="text" class="form-control" id="location" ng-model="companyData.location" placeholder="Location">
                 </div>
             </div>
 
             <div class="form-group">
                 <label for="description" class="col-sm-2 control-label">Description</label>
                 <div class="col-sm-10">
-                    <input type="text" class="form-control" id="description" placeholder="Description">
+                    <input type="text" class="form-control" id="description" ng-model="companyData.description" placeholder="Description">
                 </div>
             </div>
 
